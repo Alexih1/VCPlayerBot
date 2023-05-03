@@ -31,13 +31,13 @@ except ModuleNotFoundError:
 class Config:
     #Telegram API Stuffs
     load_dotenv()  # load enviroment variables from .env file
-    ADMIN = os.environ.get("ADMINS", '1880062855')
+    ADMIN = os.environ.get("ADMINS", '')
     SUDO = [int(admin) for admin in (ADMIN).split()] # Exclusive for heroku vars configuration.
     ADMINS = [int(admin) for admin in (ADMIN).split()] #group admins will be appended to this list.
-    API_ID = int(os.environ.get("API_ID", '19646272'))
-    API_HASH = os.environ.get("API_HASH", "5cd441592853adfda81b9826349555c2")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "5042921956:AAEuW0ff2lqxqZfV8ERmKFY6OQpVj4NkBYA")     
-    SESSION = os.environ.get("SESSION_STRING", "AQErx0AAxA11Wn5LzndT57r93az29X6MNkl9NtDg2tlN5g9JPO8nCnWh7m4wSVyFeTc9Yvepj7sRvARYylD0_1ErUADFE4WmiesJ-EL6x30ADqEelO7LnTOBQcac9Co6gi0HXRWjs0RMpVQBfj1jLBLidxgMki-lhha-3939PnAlKrZpG6t23vqT449uWBI8xVsRqovl4Oc0TUaTrCiIVdqjfKf6IYgE0vJCyZahz0KvSSLm9DzA_UOoSrwyasbgU_hxVhEz4keuQ0YA07IKwXDHXIKGKn0eKgjQ7S6GhVFpUOT7csxOzboTOmPpMSdl2pvb8KigtstHeschz7bnvoUDvMopFAAAAAB5oHbhAA")
+    API_ID = int(os.environ.get("API_ID", ''))
+    API_HASH = os.environ.get("API_HASH", "")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")     
+    SESSION = os.environ.get("SESSION_STRING", "")
 
     #Stream Chat and Log Group
     CHAT = int(os.environ.get("CHAT", ""))
